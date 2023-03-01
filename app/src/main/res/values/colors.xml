@@ -11,6 +11,6 @@
     <color name="orange">#FC6016</color>
     <color name="dark_gray">#858585</color>
     <color name="light_gray">#D5D5D5</color>
-    <color name="text">#2D000000</color>
+    <color name="text">#50000000</color>
     <color name="bullet_point_text">#000000</color>
 </resources>
