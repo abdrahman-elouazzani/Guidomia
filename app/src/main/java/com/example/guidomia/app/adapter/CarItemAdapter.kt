@@ -34,6 +34,11 @@ class CarItemAdapter constructor(val context: Context) :
        return carList.size
     }
 
+    fun setCarList(carList: ArrayList<CarItem>) {
+        this.carList = carList
+        notifyDataSetChanged()
+    }
+
     class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgCar = itemView.findViewById<ImageView>(R.id.imgCar)
         val tvCarModel = itemView.findViewById<TextView>(R.id.tvCarName)
