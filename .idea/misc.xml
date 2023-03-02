@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/abdra/AndroidStudioProjects/Guidomia/app/src/main/res/drawable/bg_edit_text.xml" value="0.1715" />
         <entry key="..\:/Users/abdra/AndroidStudioProjects/Guidomia/app/src/main/res/drawable/bg_filter_layout.xml" value="0.12" />
         <entry key="..\:/Users/abdra/AndroidStudioProjects/Guidomia/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/abdra/AndroidStudioProjects/Guidomia/app/src/main/res/layout/adapter_car_item.xml" value="0.2246376811594203" />
