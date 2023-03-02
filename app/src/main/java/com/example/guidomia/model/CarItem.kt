@@ -14,5 +14,6 @@ data class CarItem(
    @SerializedName("prosList")
    val prosList: ArrayList<String>,
    @SerializedName("rating")
-   val rating: Int
+   val rating: Int,
+   var expanded: Boolean = false
 )
