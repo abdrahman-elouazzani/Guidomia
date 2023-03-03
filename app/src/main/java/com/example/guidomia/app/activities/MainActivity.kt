@@ -2,7 +2,9 @@ package com.example.guidomia.app.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.Toast
+import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.guidomia.R
@@ -18,7 +20,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val editModel: EditText = findViewById(R.id.editModel)
+        val editMake: EditText = findViewById(R.id.editMake)
+
         adapter = CarItemAdapter(this)
+
         val rvCarList: RecyclerView = findViewById(R.id.rvCarList)
         rvCarList.layoutManager = LinearLayoutManager(this)
         rvCarList.adapter = adapter
@@ -32,5 +38,29 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.getCarList()
+
+        editModel.addTextChangedListener {
+            if (it != null) {
+                if (it.isEmpty() && editMake.text.isEmpty()) {
+                    adapter.nonFilter()
+                }
+                else {
+                    adapter.filter(it.toString(), editMake.text.toString())
+                }
+            }
+        }
+
+        editMake.addTextChangedListener {
+            if (it != null) {
+                if (it.isEmpty() && editModel.text.isEmpty()) {
+                    adapter.nonFilter()
+                }
+                else {
+                    adapter.filter(editModel.text.toString(), it.toString())
+                }
+            }
+        }
     }
+
+
 }

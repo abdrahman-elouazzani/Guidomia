@@ -11,6 +11,8 @@ data class CarItem(
    val marketPrice: Double,
    @SerializedName("model")
    val model: String,
+   @SerializedName("make")
+   val make: String,
    @SerializedName("prosList")
    val prosList: ArrayList<String>,
    @SerializedName("rating")
